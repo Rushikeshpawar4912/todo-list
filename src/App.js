@@ -1,18 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
 
+import Navbar from './COMPONENTS/Navbar';
+import Footer from './COMPONENTS/Footer';
+import TODO from './COMPONENTS/Tosos.js';
+import Todos from './COMPONENTS/TodoItem';
+
 function App() {
+  let todos =[
+    {
+      sno:1,
+      title:"go to the market ",
+      desc:"you need to go to the market"
+    },
+    {
+      sno:1,
+      title:"go to the college ",
+      desc:"you need to go to the college"
+    },
+    {
+      sno:1,
+      title:"go to the school ",
+      desc:"you need to go to the school"
+    },
+   ]
   return (
- <>
- <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
-</div>
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-</div>
- </>
+    <>
+<Navbar title="mytodo" searchbar={true}/>
+<Footer/>
+<TODO/>
+<Todos/>
+</>
   );
 }
 
