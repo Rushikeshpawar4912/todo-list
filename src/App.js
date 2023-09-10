@@ -53,7 +53,7 @@ function App() {
   return (
     <>
       <Router>
-        <Header title="My Todos List" searchBar={false} />
+        <Header title="todos" searchBar={false} />
         <Routes> {/* Updated to use Routes */}
           <Route path="/" element={<AddTodo addTodo={addTodo} />} />
           <Route path="/" element={<Todos todos={todos} onDelete={onDelete} />} />
